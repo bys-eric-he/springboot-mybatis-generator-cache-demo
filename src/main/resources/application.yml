@@ -23,7 +23,9 @@ logging:
   level:
     com:
       example:
-        mapper : debug
-        com:
+        mybatis:
+          generator:
+            demo:
+              dao: DEBUG
 
     com.neo.mapper: DEBUG
