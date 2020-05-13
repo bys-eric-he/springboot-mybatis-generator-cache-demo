@@ -61,6 +61,11 @@ public class DruidConfig {
 
         //添加不需要忽略的格式信息,不拦截的静态资源.
         filterRegistrationBean.addInitParameter("exclusions", "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
+
+        //启动COOKIE、SESSION监控
+        filterRegistrationBean.addInitParameter("profileEnable","true");
+        filterRegistrationBean.addInitParameter("principalCookieName", "USER_COOKIE");
+        filterRegistrationBean.addInitParameter("principalSessionName", "USER_SESSION");
         //添加过滤规则,拦截所有请求.
         filterRegistrationBean.addUrlPatterns("/*");
 
